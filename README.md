@@ -1,15 +1,15 @@
 
 # Routing_backend
 
-Simple backend for a shortest path routing app used in paper.
+Simple backend for a shortest path routing app used in [paper](https://github.com/raviq/Routing_backend/blob/master/paper.pdf).
 
 <p align="center">
-	<img src="https://github.com/raviq/Routing_backend/blob/master/arch.png" width="500">
+	<img src="https://github.com/raviq/Routing_backend/blob/master/arch.png" width="600">
 </p>
 
 ## Citation
 
-> Hadfi, Rafik, et al. "A Cloud-‐based Architecture for Congestion Management." 情報処理学会第 77 回全国大会 6 (2015): 08.
+> Hadfi et al. "A Cloud-‐based Architecture for Congestion Management." 情報処理学会第 77 回全国大会 6 (2015): 08.
 
 
 ## Licence & Copyright
@@ -18,5 +18,4 @@ This software was developed in the hope that it would be of some use to the agen
 If you find this code to be of any use, please let me know. I would also welcome any feedback.
 
 Copyright (c) 2015--2018 Rafik Hadfi, rafik.hadfi@gmail.com
-
 
