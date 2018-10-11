@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <script>
+        function randomPath()
+        {
+            var path = "";
+            // TODO: change with locations?
+            var locations = [ "Nagoya", "Fushimi", "Yagoto", "Gokiso", "Arahata", "Motoyama", "Fukiage", "Irinaka" ];
+            var pathLength = locations.length;
+            for( var i=0 ; i < pathLength ; i++)
+            {
+                loc = locations[Math.floor(Math.random() * locations.length)]
+                var index = locations.indexOf(loc)
+                if (index > -1) locations.splice(index, 1);
+                path += loc;
+                if (i!= pathLength-1)  path += " - ";
+            }
+            return path;
+        }
+        window.onload = function() {
+        document.getElementById('pathid').value = randomPath();
+        }    
+    </script>
+    
+</head>
+<body>
+Token was {{ token }}<br>
+Client ID was {{ client_id }}
+
+<br><br>
+
+<form action="message" method="post">
+   PathInput: <input type="text" name="path" id="pathid" value="" size=100>
+   <input type="submit" value="Submit">
+</form>
+
+
+<br>
+<hr>
+
+<br>
+
+</body>
+</html>
