@@ -14,27 +14,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript"> 
 
-/*====================================================================================================================================
- *  To read:
- *    Bounds:
- *      https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds
- *    Routes, legs. steps:
- *      https://developers.google.com/maps/documentation/directions/#Routes
- *    Waypoints:
- *      https://developers.google.com/maps/documentation/directions/#Waypoints
- *====================================================================================================================================
- *
- * TODO
- *   convert array of latlng into json?
- *           http://stackoverflow.com/questions/19121206/passing-array-of-latlng-points-to-server-via-ajax-post
- *          http://stackoverflow.com/questions/7366861/plotting-latlng-coordinates-from-json-array-on-google-map-the-markers-all-st
- *           http://gis.stackexchange.com/questions/101935/how-to-get-latlng-array-from-geojson-layer-in-leaflet
- *
- *   find a way to bind from the selected path and its two markers, without using an ugly button... !
- *====================================================================================================================================           
- */
-
-
 var cache = null;
 var routes;
 var dirRenderer;
