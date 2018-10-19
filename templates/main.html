@@ -14,28 +14,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript"> 
 
-/*====================================================================================================================================
- *  To read:
- *    Bounds:
- *      https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds
- *    Routes, legs. steps:
- *      https://developers.google.com/maps/documentation/directions/#Routes
- *    Waypoints:
- *      https://developers.google.com/maps/documentation/directions/#Waypoints
- *====================================================================================================================================
- *
- * TODO
- *   convert array of latlng into json?
- *           http://stackoverflow.com/questions/19121206/passing-array-of-latlng-points-to-server-via-ajax-post
- *          http://stackoverflow.com/questions/7366861/plotting-latlng-coordinates-from-json-array-on-google-map-the-markers-all-st
- *           http://gis.stackexchange.com/questions/101935/how-to-get-latlng-array-from-geojson-layer-in-leaflet
- *
- *   find a way to bind from the selected path and its two markers, without using an ugly button... !
- *====================================================================================================================================           
- */
-
-
-var cache = null;
+	var cache = null;
 var routes;
 var dirRenderer;
 var dirContainer
@@ -82,12 +61,6 @@ function initialize()
             document.getElementById('routeIndexInfo').innerHTML += "<hr>";
 
             document.getElementById('routeIndexInfo').innerHTML += "&nbsp;&nbsp; routes (length = " +  routes.length + "):<br>";
-            
-            /*
-            All args in https://developers.google.com/maps/documentation/javascript/reference#DirectionsResult
-            TODO: use bounds, legs, etc.
-                  legs has arrival, departure, distance, duration, start/end locations, ....
-            */
             
             var colors = ['red', 'green', 'blue', 'orange', 'yellow'];
             
@@ -186,10 +159,8 @@ function initialize()
         alert("Bid = " + bid)
         
     }
-//===================================================================================================
-// Based on: http://stackoverflow.com/questions/3404499/plotting-a-route-on-google-maps
-// also: http://stackoverflow.com/questions/4014963/how-save-the-directionsresult-object-in-google-maps
-  function setStaticRoute()
+
+    function setStaticRoute()
     {        
        var point1 = new google.maps.LatLng(35.16746, 136.88059);
        var point2 = new google.maps.LatLng(35.16973, 136.89742);
@@ -231,7 +202,7 @@ function initialize()
 			});
        
     }
-//===================================================================================================    
+
     function saveRoute()
     {
         
@@ -249,8 +220,8 @@ function initialize()
         }
         
     }
-//===========================
-    function ViewRoute()
+
+function ViewRoute()
     {
         drawRoute();
         
@@ -260,9 +231,8 @@ function initialize()
         }
         
     }
-//===================================================================================================
 
-    function Markit()
+function Markit()
     {
         // only the first route: index=0
         var index = 0;
